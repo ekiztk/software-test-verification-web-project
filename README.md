@@ -1,6 +1,6 @@
-python manage.py runserver
+run server: python manage.py runserver
 
-env name : stvvenv
+activate environment: stvvenv\Scripts\activate
 
 admin
 1234
