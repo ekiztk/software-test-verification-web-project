@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <style>
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    img {
+      width: 40vw;
+      height: auto;
+    }
+  </style>
+
+  <div class="center-content">
+    <h2>Result Image</h2>
+    {% if img_obj %}
+      <img src="{{ img_obj.image.url }}" alt="result">
+    {% else %}
+      <p>No image.</p>
+    {% endif %}
+  </div>
+{% endblock %}

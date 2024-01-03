@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      text-align: center;  
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      margin: 0 auto;
+    }
+
+    input, button {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    form p{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+
+
+  <form method="POST" enctype="multipart/form-data">
+    <h2>Resim Yükle</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Yükle</button>
+  </form>
+{% endblock %}
